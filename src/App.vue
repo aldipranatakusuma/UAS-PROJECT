@@ -6,7 +6,7 @@
       <v-container>
         <router-view />
         <v-layout class=""></v-layout>
-        <v-app-bar title="hallo"></v-app-bar>
+        <v-app-bar title="Sobat Tobat"></v-app-bar>
       </v-container>
     </v-main>
   </v-app>

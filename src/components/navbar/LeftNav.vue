@@ -13,7 +13,7 @@
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title>
-                <router-link to="/about">About</router-link>
+                <router-link to="/obat">Obat</router-link>
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>

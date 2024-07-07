@@ -1,8 +1,10 @@
-// src/router/index.ts
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import AboutView from '../views/AboutView.vue';
+import ObatView from '../views/ObatView.vue';
 import DashboardView from '../views/DashboardView.vue';
+import ObatList from '../views/ObatList.vue';
+import ObatForm from '../components/ObatForm.vue';
+import ObatTable from '@/components/ObatTable.vue'; // Tambahkan impor untuk ObatTable di sini
 
 const routes = [
   {
@@ -11,9 +13,31 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    component: AboutView
+    path: '/obat',
+    name: 'obat',
+    component: ObatView,
+    children: [
+      {
+        path: '',
+        name: 'obat-list',
+        component: ObatList
+      },
+      {
+        path: 'add',
+        name: 'obat-add',
+        component: ObatForm
+      },
+      {
+        path: 'edit/:id',
+        name: 'obat-edit',
+        component: ObatForm
+      },
+      {
+        path: 'table',
+        name: 'obat-table', // Beri nama route untuk ObatTable
+        component: ObatTable // Tambahkan komponen ObatTable di sini
+      }
+    ]
   },
   {
     path: '/dashboard',
