@@ -1,3 +1,3 @@
 <template>
-  <h1>anjing</h1>
+  <h1>Selamat Datang di Dunia Tipu Tipu</h1>
 </template>
