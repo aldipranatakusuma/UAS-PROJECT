@@ -3,13 +3,17 @@
     <v-row>
       <v-col>
         <h1>CRUD Database</h1>
-        <v-data-table :headers="headers" :items="obats" class="elevation-1">
-          <template v-slot:item.actions="{ item }">
+        <v-data-table :headers="headers" :items="obats" class="elevation-1" key="obats.length">
+          <template v-slot:item ="{ item }">
             <v-btn color="yellow" @click="editObat(item.id)">Edit</v-btn>
             <v-btn color="red" @click="deleteObat(item.id)">Del</v-btn>
           </template>
         </v-data-table>
-        <v-btn color="green" @click="addObat">Add Item</v-btn>
+        <v-row>
+          <v-col>
+            <v-btn color="green" @click="addObat">Add Item</v-btn>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
   </v-container>

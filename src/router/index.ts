@@ -2,9 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import ObatView from '../views/ObatView.vue';
 import DashboardView from '../views/DashboardView.vue';
-import ObatList from '../views/ObatList.vue';
+import ObatList from '../components/ObatList.vue';
 import ObatForm from '../components/ObatForm.vue';
 import ObatTable from '@/components/ObatTable.vue'; // Tambahkan impor untuk ObatTable di sini
+import EditObat from '@/components/EditObat.vue';
 
 const routes = [
   {
@@ -28,9 +29,9 @@ const routes = [
         component: ObatForm
       },
       {
-        path: 'edit/:id',
+        path: '/obat/edit/:id',
         name: 'obat-edit',
-        component: ObatForm
+        component: EditObat
       },
       {
         path: 'table',
